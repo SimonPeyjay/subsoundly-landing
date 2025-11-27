@@ -1,0 +1,140 @@
+/* ===== Hero layout ===== */
+
+.hero {
+  display: grid;
+  grid-template-columns: 592px 1fr; /* text + bild */
+  align-items: center;
+  gap: 24px;
+
+  padding: 160px 0 80px;
+  min-height: 760px;
+
+  background-size: cover;
+  background-position: center;
+  background-color: var(--color-bg);
+
+  position: relative;
+  color: white;
+}
+
+/* Om du använder en wrapper .heroText i JSX */
+.heroText {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== Rubriken (Where / songs / happen) ===== */
+
+.title {
+  position: relative; /* för scriptOverlay */
+  display: inline-block;
+  font-size: var(--size-h1);
+  line-height: 1.05;
+  margin: 0 0 16px 0;
+  color: white;
+  font-weight: var(--fw-bold);
+  font-family: var(--font-display);
+  letter-spacing: var(--tracking-tight);
+}
+
+ .titleLine {
+   display: block;
+   font-family: var(--font-geist);
+ }
+
+
+/* "songs" – Mastery, överlagrad */
+.scriptOverlay {
+  position: absolute;
+  left: 24px;   /* finjustera efter Figma */
+  top: 50px;   /* finjustera efter Figma */
+  z-index: 3;
+
+  display: inline-block;
+  font-family: var(--font-script);
+  font-size: clamp(64px, 14vw, 160px);
+  line-height: 1;
+
+  transform: translateY(-12px) rotate(-6deg);
+  opacity: 0.98;
+  color: white;
+  mix-blend-mode: screen;
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+/* ===== Brödtext & knappar ===== */
+
+.lead {
+  font-size: var(--size-base);
+  color: rgba(255, 255, 255, 0.92);
+  margin: 18px 0 24px 0;
+  max-width: 560px;
+}
+
+.ctaRow {
+  display: flex;
+  gap: 16px;
+}
+
+/* Primär CTA */
+.primaryBtn {
+  background: var(--color-primary);
+  color: white;
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+/* Sekundär CTA */
+.secondaryBtn {
+  padding: 12px 20px;
+  background: transparent;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: white;
+  cursor: pointer;
+}
+
+/* ===== Bild till höger ===== */
+
+.heroImage {
+  width: 100%;
+  max-width: 680px;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(24, 12, 56, 0.24);
+  opacity: 0.7; /* gör bilden mörkare mot bakgrunden */
+}
+
+/* ===== Mobil ===== */
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 64px 0;
+    min-height: auto;
+    text-align: center;
+  }
+
+  .heroImage {
+    display: none; /* eller lägg under texten om du vill visa den */
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .scriptOverlay {
+    position: relative;
+    left: 0;
+    top: 0;
+
+    font-size: clamp(32px, 20vw, 72px);
+    transform: translateY(-8px) rotate(-3deg);
+  }
+
+  .ctaRow {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,22 @@
+.pricing { padding: 80px 0 120px; }
+.pricingHeader { font-size: var(--size-h2); font-weight: var(--fw-bold); margin-bottom: 32px; font-family: var(--font-geist); color: white; }
+.cards { display:flex; gap: 28px; justify-content: center; align-items: stretch; }
+.card { background: #0f0f0f; border-radius: 12px; padding: 28px; width: 386px; color: white; display: flex; flex-direction: column; justify-content: space-between; min-height: 340px; }
+.cardHeader { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.cardTitle { font-weight: 700; font-size: 20px; }
+.badge { background: rgba(255,255,255,0.08); padding: 6px 10px; border-radius: 8px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+.cardFeatured { background: var(--color-primary); color: white; position: relative; box-shadow: 0 12px 40px rgba(52, 23, 170, 0.15); }
+.cardFeatured .badge { background: rgba(255,255,255,0.16); }
+.price { font-size: 56px; font-weight: 300; font-family: var(--font-ui); }
+.priceRow { display:flex; align-items: baseline; gap: 8px; }
+.suffix { opacity: 0.85; font-size: 20px; }
+.subtitle { opacity: 0.8; margin-top: 8px; }
+.cardBody { margin-top: 12px; }
+.cardFooter { margin-top: 24px; }
+.cardButton { padding: 12px 20px; border-radius: 28px; background: white; color: black; font-weight: 700; border: none; cursor: pointer; }
+.cardButtonGhost { padding: 12px 20px; border-radius: 28px; background: transparent; border: 1px solid rgba(255,255,255,0.12); color: white; font-weight: 700; }
+.compareBtn { margin-top: 28px; display: inline-block; background: transparent; color: white; border: 2px solid rgba(255,255,255,0.12); padding: 10px 18px; border-radius: 40px; }
+@media (max-width: 900px) {
+	.cards { flex-direction: column; gap: 18px; }
+	.card { width: 100%; max-width: 420px; margin: 0 auto; }
+}

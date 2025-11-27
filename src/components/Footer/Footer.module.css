@@ -1,0 +1,7 @@
+.footer { background: var(--color-primary); color: black; padding: 80px 0; text-align: center; }
+.footerTitle { font-size: 46px; font-weight: 700; font-family: var(--font-ui); }
+.footerBrand { font-size: clamp(80px, 16vw, 200px); font-weight: 700; opacity: 0.9; font-family: var(--font-display); letter-spacing: var(--tracking-tight); }
+.footerLinks { display:flex; gap: 24px; justify-content:center; margin-top: 16px; }
+@media (max-width: 900px) {
+  .footerBrand { font-size: 72px; }
+}

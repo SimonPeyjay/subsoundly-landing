@@ -1,0 +1,25 @@
+.discover { background: var(--color-bg); color: #fff; padding: 160px 0 120px; position: relative; overflow: hidden; }
+.discoverInner { display: flex; gap: 24px; align-items: flex-start; position: relative; padding-left: 16px; z-index: 6; }
+.title { font-size: var(--size-h2); color: var(--color-primary); margin: 0 0 32px 0; font-family: var(--font-display); font-weight: var(--fw-semibold); }
+.lead { color: #fff; opacity: 0.95; font-size: var(--size-base); font-family: var(--font-ui); }
+.previewGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card { border-radius: 14px; overflow: hidden; width: 100%; height: 100%; background-size: cover; background-position: center; box-shadow: 0 8px 30px rgba(0,0,0,0.4); }
+@media (max-width: 900px) {
+  .discoverInner { flex-direction: column; }
+  .previewGrid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 900px) {
+  .bgWord { font-size: clamp(72px, 40vw, 160px); left: 8px; top: -8px; transform: translate3d(0, -6px, 0) rotate(-6deg); }
+}
+
+.bgWord { position: absolute; left: 40px; top: 20px; font-size: clamp(160px, 30vw, 420px); font-family: var(--font-script); color: rgba(52, 23, 170, 0.12); z-index: 3; pointer-events: none; transform: translate3d(0, -10px, 0) rotate(-6deg); }
+.discoverInner > * { position: relative; z-index: 1; }
+
+/* A centered absolute canvas mapping Figma 1600px coordinates to the page. */
+.discoverCanvas { position: absolute; left: 50%; transform: translateX(-50%); top: 238px; width: 1600px; height: 1350px; pointer-events: none; z-index: 2; transform-origin: center top; }
+.discoverCanvas > div { position: absolute; border-radius: 20px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.6); }
+
+@media (max-width: 900px) {
+  .discoverCanvas { display: none; }
+}

@@ -1,0 +1,47 @@
+:root {
+  --color-primary: #3014B8;
+  --color-bg: #080808; /* main site background matches Figma black */
+  --color-text: #0f172a;
+  --color-muted: #6b7280;
+  --container-max: 1120px;
+  /* Typography tokens */
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  --font-display: 'Mastery', 'Playfair Display', Georgia, serif; /* use Mastery as the display font */
+  /* Custom Mastery font (TTF); fallbacks added for safety */
+  --font-ui: 'Poppins', 'Inter', system-ui, -apple-system;
+  --font-script: 'Mastery', 'Pacifico', 'Brush Script MT', cursive; /* use Mastery for the script/display words */
+  --font-geist: 'Geist', 'Poppins', 'Inter', system-ui, -apple-system; /* Geist primary, fallback to Poppins/Inter */
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* Fluid/clamped typography using clamp(min, preferred, max) for better responsiveness */
+  --size-h1: clamp(48px, 6.5vw, 140px);
+  --size-h2: clamp(36px, 4.5vw, 88px);
+  --size-h3: clamp(24px, 3.1vw, 48px);
+  --size-base: clamp(15px, 1.6vw, 20px);
+  --size-sm: clamp(12px, 1.2vw, 14px);
+
+  --tracking-tight: -0.02em;
+  --tracking-wide: 0.02em;
+}
+
+/* Font-face declarations */
+@font-face {
+  font-family: 'Mastery';
+  src: url('/src/assets/fonts/Mastery.ttf') format('truetype');
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Geist variable font */
+@font-face {
+  font-family: 'Geist';
+  src: url('/src/assets/fonts/Geist-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
