@@ -6,20 +6,20 @@ import arrowRight from "../../assets/Icons/arrow-right.svg";
 const Hero: React.FC = () => {
   return (
     <section
-      style={{
-        backgroundImage: `url(${heroBackground})`,
-      }}
-      className={styles.hero}
+      style={{backgroundImage: `url(${heroBackground})`,
+      }}className={styles.hero}
     >
       <div className="container">
-        <div>
-          <h1 className={styles.title}>
+        <div className={styles.heroGrid}>
+            {/* Vänsterkolumn: text */}
+          <div className={styles.heroText}>
+           <h1 className={styles.title}>
             <span className={styles.titleLine}>Where</span>
             <span className={styles.scriptOverlay}>{"songs"}</span>
             <span className={styles.titleLine}>happen</span>
           </h1>
 
-          <p className={styles.lead}>
+          <p className={styles.subtitle}>
             and ownership is shared.
           </p>
 
@@ -32,15 +32,16 @@ const Hero: React.FC = () => {
             <button className={styles.heroBtn}>
               <img src={arrowRight}
               alt=""
-              className={styles.HeroBtnIcon}  
+              className={styles.heroBtnIcon}  
               />
-              <span className={styles.HeroBtnLabel}>Get started</span>
+              <span className={styles.heroBtnLabel}>Get started</span>
               
             </button>
             
           </div>
         </div>
-
+        
+      </div>
       
       </div>
     </section>

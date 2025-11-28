@@ -1,5 +1,6 @@
 declare const styles: {
   readonly hero: string;
+  readonly subtitle: string;
   readonly title: string;
   readonly lead: string;
   readonly wordWrap: string;
@@ -10,8 +11,9 @@ declare const styles: {
   readonly secondaryBtn: string;
   readonly titleLine: string;
   readonly heroText: string;
+  readonly heroGrid: string;
   readonly heroBtn: string;
-  readonly HeroBtnLabel: string;
-readonly HeroBtnIcon: string;
+  readonly heroBtnLabel: string;
+  readonly heroBtnIcon: string;
 };
 export = styles;
