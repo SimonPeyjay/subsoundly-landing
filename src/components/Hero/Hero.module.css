@@ -28,12 +28,12 @@
 .title {
   position: relative; /* för scriptOverlay */
   display: inline-block;
-  font-size: var(--size-h1);
-  line-height: 1.05;
+  font-size: var(--size-display);
+  line-height: 1.4;
   margin: 0 0 16px 0;
   color: white;
-  font-weight: var(--fw-bold);
-  font-family: var(--font-display);
+  font-weight: var(--fw-normal);
+  font-family: var(--font-geist);
   letter-spacing: var(--tracking-tight);
 }
 
@@ -46,16 +46,19 @@
 /* "songs" – Mastery, överlagrad */
 .scriptOverlay {
   position: absolute;
-  left: 24px;   /* finjustera efter Figma */
-  top: 50px;   /* finjustera efter Figma */
   z-index: 3;
+
+  /* center vertically inside the title */
+  top: 50%;
+  left: 10px;                     /* start at same x as "Where" */
+  transform: translateY(-50%); /* exactly in the middle between the lines */
 
   display: inline-block;
   font-family: var(--font-script);
-  font-size: clamp(64px, 14vw, 160px);
+  font-size: clamp(80px, 14vw, 160px);
   line-height: 1;
 
-  transform: translateY(-12px) rotate(-6deg);
+  
   opacity: 0.98;
   color: white;
   mix-blend-mode: screen;
@@ -65,7 +68,11 @@
 /* ===== Brödtext & knappar ===== */
 
 .lead {
-  font-size: var(--size-base);
+  font-family: var(--geist);
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: var(--fw-medium);
+
   color: rgba(255, 255, 255, 0.92);
   margin: 18px 0 24px 0;
   max-width: 560px;
@@ -73,7 +80,10 @@
 
 .ctaRow {
   display: flex;
-  gap: 16px;
+  padding: 16px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 
 /* Primär CTA */
@@ -85,6 +95,41 @@
   font-weight: 600;
   border: none;
   cursor: pointer;
+}
+
+/* Hero CTA */
+.heroBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  background: var(--color-primary);
+  color: white;
+  border-radius: 40px;
+  padding: 16px 24px;
+  border: none;
+  cursor: pointer;
+
+  font-size: var(--size-btn-hero);
+  font-weight: 600;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+/* Texten om du vill kunna finjustera den separat */
+.heroBtnLabel {
+  line-height: 1;          /* tajt så den centras snyggt */
+}
+
+/* Ikonen */
+.heroBtnIcon {
+  width: 32px;             /* testa dig fram */
+  height: 32px;
+  display: block;
+  position: relative;
+  
 }
 
 /* Sekundär CTA */
@@ -104,7 +149,7 @@
   max-width: 680px;
   border-radius: 18px;
   box-shadow: 0 8px 24px rgba(24, 12, 56, 0.24);
-  opacity: 0.7; /* gör bilden mörkare mot bakgrunden */
+  opacity: 1; /* gör bilden mörkare mot bakgrunden */
 }
 
 /* ===== Mobil ===== */

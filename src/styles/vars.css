@@ -1,6 +1,6 @@
 :root {
   --color-primary: #3014B8;
-  --color-bg: #080808; /* main site background matches Figma black */
+  --color-bg: #000000; /* main site background matches Figma black */
   --color-text: #0f172a;
   --color-muted: #6b7280;
   --container-max: 1120px;
@@ -8,7 +8,6 @@
   --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
   --font-display: 'Mastery', 'Playfair Display', Georgia, serif; /* use Mastery as the display font */
   /* Custom Mastery font (TTF); fallbacks added for safety */
-  --font-ui: 'Poppins', 'Inter', system-ui, -apple-system;
   --font-script: 'Mastery', 'Pacifico', 'Brush Script MT', cursive; /* use Mastery for the script/display words */
   --font-geist: 'Geist', 'Poppins', 'Inter', system-ui, -apple-system; /* Geist primary, fallback to Poppins/Inter */
 
@@ -17,12 +16,20 @@
   --fw-semibold: 600;
   --fw-bold: 700;
 
-  /* Fluid/clamped typography using clamp(min, preferred, max) for better responsiveness */
-  --size-h1: clamp(48px, 6.5vw, 140px);
-  --size-h2: clamp(36px, 4.5vw, 88px);
-  --size-h3: clamp(24px, 3.1vw, 48px);
-  --size-base: clamp(15px, 1.6vw, 20px);
-  --size-sm: clamp(12px, 1.2vw, 14px);
+   /* TYPO SCALE */
+  /* Hero / stora statements */
+  --size-display: clamp(42px, 8vw, 134px);
+  --size-btn-hero: clamp(18px, 1.2vw, 24px);
+  /* Sektionstitlar (Discover, Our plans…) */
+  --size-h1: clamp(32px, 3.5vw, 48px);
+
+  /* Undersektioner / card-rubriker */
+  --size-h2: clamp(24px, 2.6vw, 32px);
+  --size-h3: clamp(18px, 2vw, 24px);
+
+  /* Brödtext */
+  --size-body: 16px;
+  --size-sm: 14px;
 
   --tracking-tight: -0.02em;
   --tracking-wide: 0.02em;

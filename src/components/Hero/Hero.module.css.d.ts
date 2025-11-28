@@ -10,5 +10,8 @@ declare const styles: {
   readonly secondaryBtn: string;
   readonly titleLine: string;
   readonly heroText: string;
+  readonly heroBtn: string;
+  readonly HeroBtnLabel: string;
+readonly HeroBtnIcon: string;
 };
 export = styles;

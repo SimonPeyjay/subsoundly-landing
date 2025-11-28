@@ -10,8 +10,6 @@ const Header: React.FC = () => {
         <span className={styles.wordmark}>subsoundly</span>
       </div>
       <nav aria-label="Primary navigation" className={styles.nav}>
-        <a href="#features">Features</a>
-        <a href="#pricing">Pricing</a>
         <button className={styles.outlineBtn}>Log in</button>
         <button className={styles.cta}>Sign up</button>
       </nav>
